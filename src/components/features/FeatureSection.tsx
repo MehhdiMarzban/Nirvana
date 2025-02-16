@@ -27,7 +27,7 @@ export function FeaturesSection() {
     {
       title: 'Made by Next.JS',
       description:
-        'we are using the modern stack with Next.js, React, TailwindCSS, and TypeScript.',
+        'Created by the modern stack with Next.js, React, TailwindCSS, Shadcn and TypeScript.',
       icon: <IconBolt />,
     },
     {
@@ -92,10 +92,10 @@ const Feature = ({
       {index >= 4 && (
         <div className="pointer-events-none absolute inset-0 h-full w-full bg-gradient-to-b from-muted/40 to-transparent opacity-0 transition duration-200 group-hover/feature:opacity-100" />
       )}
-      <div className="relative z-10 mb-4 px-10 text-foreground">{icon}</div>
+      <div className="relative z-10 mb-4 px-10 text-foreground group-active/feature:scale-105 transition-all ease">{icon}</div>
       <div className="relative z-10 mb-2 px-10 font-bold text-lg">
-        <div className="absolute inset-y-0 left-0 h-6 w-1 origin-center rounded-tr-full rounded-br-full bg-muted transition-all duration-200 group-hover/feature:h-8 group-hover/feature:bg-primary" />
-        <span className="inline-block text-foreground transition duration-200 group-hover/feature:translate-x-2">
+        <div className="absolute peer/line inset-y-0 left-0 h-6 w-1 origin-center rounded-tr-full rounded-br-full bg-muted transition-all duration-200 group-hover/feature:h-8 group-hover/feature:bg-primary" />
+        <span className="inline-block peer-hover/line:text-primary  text-foreground transition duration-200 group-hover/feature:translate-x-2">
           {title}
         </span>
       </div>
